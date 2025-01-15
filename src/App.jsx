@@ -2,6 +2,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './component/Navbar';
 import Product from './component/Product';
+
+import Joki from './component/Joki';  // Contoh komponen Joki Codingan
 import Home from './component/Home';
 import ListProducts from './component/ListProducts';
 import ProductDetail from './component/DetailProduct';
@@ -17,7 +19,8 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/products" element={<Product />} />
+        <Route path="/paket internet" element={<Product />} />
+        <Route path="/joki codingan" element={<Joki />} />
         <Route path="/" element={<Home/>} />
         <Route path="/products/:id/menu" element={<ListProducts />} />
         <Route path="/products/:id/menu/:id_list/detail" element={<ProductDetail />} />

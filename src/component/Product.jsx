@@ -18,15 +18,17 @@ function Product() {
 
   return (
     <div className="layanan">
-      <h1>Pulsa</h1>
+      <h1 className="section-title">Pulsa</h1>
       <div className="product">
         {pulsaProduct.map((product) => (
           <div key={product.id} className="card">
-            <img
-              src={product.photo || "default-image.jpg"} // Ganti dengan properti imageUrl dari data Anda
-              alt={product.name}
-              className="card-img"
-            />
+            <div className="card-img-container">
+              <img
+                src={product.photo || "default-image.jpg"} // Ganti dengan properti imageUrl dari data Anda
+                alt={product.name}
+                className="card-img"
+              />
+            </div>
             <div className="card-content">
               <h2 className="card-title">{product.name}</h2>
               <p className="card-description">{product.provider}</p>
@@ -38,15 +40,18 @@ function Product() {
         ))}
       </div>
 
-      <h1>Kuota Internet</h1>
+      <h1 className="section-title">Kuota Internet</h1>
       <div className="product">
         {kuotaProducts.map((product) => (
           <div key={product.id} className="card">
-            <img
-              src={product.photo || "default-image.jpg"} // Ganti dengan properti imageUrl dari data Anda
-              alt={product.name}
-              className="card-img"
-            />
+            <div className="card-img-container">
+              <img
+                src={product.photo || "default-image.jpg"} // Ganti dengan properti imageUrl dari data Anda
+                alt={product.name}
+                className="card-img"
+   
+              />
+            </div>
             <div className="card-content">
               <h2 className="card-title">{product.name}</h2>
               <p className="card-description">{product.provider}</p>
@@ -58,21 +63,6 @@ function Product() {
         ))}
       </div>
 
-      <h1>Helper Task</h1>
-      <div className="product">
-        <div className="card">
-          <div className="card-content">
-            <h2 className="card-title">Coding</h2>
-            <p className="card-description">
-             PHP,JAVASCRIPT,CODEIGNITER4,LARAVEL
-            </p>
-            <Link to="/products/task" className="card-button">
-              Order Via WhatsApp
-            </Link>
-          </div>
-        </div>
-      
-      </div>
     </div>
   );
 }

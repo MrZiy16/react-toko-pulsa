@@ -17,7 +17,7 @@ function Home() {
             Kami menyediakan solusi terbaik untuk mempermudah kebutuhan Anda
             dengan layanan berkualitas dan mudah digunakan. Cobalah sekarang!
           </p>
-          <a href='/products' className="cta-button">Ayo Lihat Product</a>
+          <a href='/paket internet ' className="cta-button">Ayo Lihat Product</a>
         </div>
       </div>
 
@@ -40,7 +40,7 @@ function Home() {
           <p>Melayani pembelian product digital PPOB</p>
         </div>
         <div className="feature-item">
-          <h3>Helper Task</h3>
+          <h3>Helper Task (JOKI)</h3>
           <p>Membantu mengerjakan tugas pelanggan</p>
         </div>
         </div>

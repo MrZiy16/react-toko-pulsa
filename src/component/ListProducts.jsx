@@ -47,8 +47,9 @@ function ListProducts() {
   };
 
   return (
-    <ul className="product-list">
+    <>
       <h2>Menu </h2>
+    <ul className="product-list">
       {products.map((product) => (
         <li
           key={product.id}
@@ -60,6 +61,7 @@ function ListProducts() {
         </li>
       ))}
     </ul>
+      </>
   );
 }
 

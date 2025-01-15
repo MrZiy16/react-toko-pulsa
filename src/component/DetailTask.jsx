@@ -4,13 +4,16 @@ import "./Product"; // Pastikan untuk mengimpor file CSS
 function DetailTask() {
   const [jenisTugas, setJenisTugas] = useState("");
   const [deskripsi, setDeskripsi] = useState("");
+  const [framework,setFramework]=useState("");
+  const [deadline,setDeadline]=useState("");
+  
   const [price, setPrice] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Format pesan untuk WhatsApp
-    const message = `Jenis Tugas: ${jenisTugas}\nDeskripsi: ${deskripsi}\nPrice: Rp ${price}`;
+    const message = `Jenis Tugas: ${jenisTugas}\nDeskripsi: ${deskripsi}\nPrice: Rp ${price}\nFramework: ${framework}\nDeadline: ${deadline}`;
     const whatsappURL = `https://api.whatsapp.com/send?phone=6283168867815&text=${encodeURIComponent(
       message
     )}`;
@@ -21,7 +24,7 @@ function DetailTask() {
 
   return (
     <div style={{ maxWidth: "500px", margin: "auto" }}>
-      <h2>Form Detail Task</h2>
+      <h2>Form Joki</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="jenisTugas">Jenis Tugas</label>
@@ -45,7 +48,36 @@ function DetailTask() {
             required
           />
         </div>
+<div>
+  <label htmlFor="framework">Framework/Bahasa Pemrograman</label>
+  <select
+    id="framework"
+    value={framework}
+    onChange={(e) => setFramework(e.target.value)}
+    required
+  >
+    <option value="" >Pilih framework/Bahasa</option>
+    <option value="Html & Css">Html & Css</option>
+    <option value="Laravel">Laravel</option>
+    <option value="Codeigniter ">Codeigniter 4</option>
+    <option value="PHP">PHP Biasa</option>
+    <option value="Javascript">Javascript</option>
 
+  </select>
+</div>
+
+
+<div>
+  <label htmlFor="deadline">Deadline</label>
+  <input
+    type="date"
+    id="deadline"
+    value={deadline}
+    onChange={(e) => setDeadline(e.target.value)}
+    placeholder="Pilih deadline"
+    required
+  />
+</div>
         <div>
           <label htmlFor="price">Price</label>
           <input
